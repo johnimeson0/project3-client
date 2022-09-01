@@ -42,7 +42,7 @@ function Home(){
 
     useEffect(() => {
         checkFirstTime()
-    }, [user])
+    }, [loggedIn])
 
     useEffect(() => {
         getJoke()
