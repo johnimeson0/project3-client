@@ -28,7 +28,8 @@ function Home(){
     // console.log(user)
     const checkFirstTime = () => {
         if (profile && profile.favoriteCar === "") {
-            navigate(`/edit-profile/${profile._id}`)
+            // navigate(`/edit-profile/${profile._id}`)
+            console.log('should send to profile')
         }
     }
 
@@ -42,7 +43,7 @@ function Home(){
 
     useEffect(() => {
         checkFirstTime()
-    }, [loggedIn])
+    }, [])
 
     useEffect(() => {
         getJoke()
