@@ -30,7 +30,7 @@ function CarsPage() {
   return (
     <>
     <div className='ProjectListPage'>
-        <Link to={`/create-car`}>Add Car</Link>
+        <Link to={`/create-car`}><button>Add Car</button></Link>
         {cars.map((el) => {
             return (
                 <div className="Carcard card" key={el._id}>

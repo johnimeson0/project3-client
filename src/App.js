@@ -20,6 +20,8 @@ import ViewPost from './pages/ForumPages/ViewPost';
 import ViewEvent from './pages/EventPages/ViewEvent';
 import EditCar from './pages/CarPages/EditCar';
 import Friends from './components/Friends/Friends';
+import CreateEvent from './pages/EventPages/CreateEvent';
+import CreatePost from './pages/ForumPages/CreatePost';
 import Private from './components/Private/Private';
 
 function App() {
@@ -40,7 +42,9 @@ function App() {
       <Route path="/forum" element={<Private> <PostsPage /> </Private>}/>
       <Route path="/events" element={<Private> <EventsPage /> </Private>}/>
       <Route path="/create-profile" element={<Private> <CreateProfile /> </Private>}/>
+      <Route path="/create-event" element={<Private> <CreateEvent /> </Private>}/>
       <Route path="/create-car" element={<Private> <CreateCar /> </Private>}/>
+      <Route path="/create-post" element={<Private> <CreatePost /> </Private>}/>
       <Route path="/edit-car/:id" element={<Private> <EditCar /> </Private>}/>
       <Route path="/cars/:id" element={<Private> <ViewCarPage /> </Private>}/>
       <Route path="/forum/:id" element={<Private> <ViewPost /> </Private>}/>

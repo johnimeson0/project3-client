@@ -40,7 +40,7 @@ function ViewEvent() {
                             <h3>{event.body} </h3>
                             <h5>{event.address}</h5>
                             <h3>This event was posted by:</h3>
-                    <Link className="testing"to={`/profile/${event.authorId._id}`}> <div className="profile-link-card"> <img src={event.authorId.imgUrl} alt="" id="small-img"/>@{event.authorId.username} </div> </Link>
+                    <Link className="testing"to={`/profile/${event.authorId[0]._id}`}> <div className="profile-link-card"> <img src={event.authorId[0].imgUrl} alt="" id="small-img"/>@{event.authorId[0].username} </div> </Link>
                         </div>
                     {/* </Link> */}
                     {/* <h4>{el.description}</h4> */}

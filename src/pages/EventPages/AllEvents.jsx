@@ -29,6 +29,7 @@ function EventsPage() {
   return (
     <>
         {/* <AddCar getEvents={getEvents} /> */}
+        <Link to="/create-event"><button>Add Event</button></Link>
     <div className='EventListPage'>
         {events.map((el) => {
             return (
@@ -36,7 +37,7 @@ function EventsPage() {
                     <Link to={`/events/${el._id}`}>
                         <div>
                             <img src={el.imgUrl} alt="" id='event-img'/>
-                            <h1>{el.title} - {el.authorId.username}</h1>
+                            <h1>{el.title} - {el.authorId[0].username}</h1>
                             <p>{el.body}</p>
                         </div>
                     </Link>

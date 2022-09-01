@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react';
 import axios from 'axios';
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
 
 
@@ -9,7 +9,7 @@ function EditCar(){
     const {user} = useContext(AuthContext)
 
         const {id} = useParams()
-        const navigate = Navigate();
+        const navigate = useNavigate();
 
         const [make, setMake] = useState('')
         const [model, setModel] = useState('')

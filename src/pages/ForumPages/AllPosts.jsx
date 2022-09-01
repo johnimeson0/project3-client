@@ -45,7 +45,7 @@ return (
         {/* <AddCar getposts={getposts} /> */}
     <div className='PostListPage'>
     <Searchbar searchResults={searchResults} />
-        {displayPosts.map((el) => {
+        {posts.map((el) => {
             return (
                 <div className="Postcard card" key={el._id}>
                     <Link to={`/forum/${el._id}`}>
