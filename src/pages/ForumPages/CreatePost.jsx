@@ -13,29 +13,37 @@ function CreatePost(){
         const [title, setTitle] = useState('')
         const [body, setBody] = useState('')
         const [imgUrl, setImgUrl] = useState('')
+        const [fileUrl, setFileUrl] = useState("");
+        const [loading, setLoading] = useState(false);
     
         const handleTitle = (e) => setTitle(e.target.value)
         const handleBody = (e) => setBody(e.target.value)
         const handleImgUrl = (e) => setImgUrl(e.target.value) 
 
-        // const handleFileUpload = (e) => {
-        //     // console.log("The file to be uploaded is: ", e.target.files[0]);
+
+        const handleFileUpload = (e) => {
+          setLoading(true);
         
-        //     const uploadData = new FormData();
+          const uploadData = new FormData();
         
-        //     // imageUrl => this name has to be the same as in the model since we pass
-        //     // req.body to .create() method when creating a new movie in '/api/movies' POST route
-        //     uploadData.append("imageUrl", e.target.files[0]);
+          uploadData.append("fileUrl", e.target.files[0]);
         
-        //     service
-        //       .uploadImage(uploadData)
-        //       .then((response) => {
-        //         // console.log("response is: ", response);
-        //         // response carries "fileUrl" which we can use to update the state
-        //         setImgUrl(response.fileUrl);
-        //       })
-        //       .catch((err) => console.log("Error while uploading the file: ", err));
-        //   };
+          axios
+            .post(`${process.env.REACT_APP_API_URL}/api/upload`, uploadData)
+            .then((response) => {
+              console.log(response.data.fileUrl)
+            
+              setLoading(false);
+            
+                setImgUrl(response.data.fileUrl)
+      
+            
+              })
+              .catch((err) => {
+                  setLoading(false);
+                  console.log("Error while uploading the file: ", err);
+              });
+    }
     
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -64,8 +72,8 @@ function CreatePost(){
                 <label htmlFor="body">Body</label>
                     <input type="text" name='body' id='body' value={body} onChange={handleBody} />
                 
-               {/*  <label htmlFor="imgUrl">Car Picture</label>
-                    <input type="file" name='imgUrl' id='imgUrl' value={imgUrl} onChange={handleImgUrl} /> */}
+                <label htmlFor="fileUrl">Post Picture</label>
+                    <input type="file" name='imgUrl' id='imgUrl' value={fileUrl} onChange={handleFileUpload}/> 
     
                 <button type="submit">Add Post</button>
             </form>

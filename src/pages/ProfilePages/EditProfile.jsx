@@ -8,6 +8,32 @@ function EditProfile(){
     const [bio, setBio] = useState('')
     const [imgUrl, setImgUrl] = useState('')
     const [favoriteCar, setFavoriteCar] = useState('')
+    const [fileUrl, setFileUrl] = useState("");
+    const [loading, setLoading] = useState(false);
+    
+    const handleFileUpload = (e) => {
+        setLoading(true);
+      
+        const uploadData = new FormData();
+      
+        uploadData.append("fileUrl", e.target.files[0]);
+      
+        axios
+          .post(`${process.env.REACT_APP_API_URL}/api/upload`, uploadData)
+          .then((response) => {
+            console.log(response.data.fileUrl)
+          
+            setLoading(false);
+          
+              setImgUrl(response.data.fileUrl)
+    
+          
+            })
+            .catch((err) => {
+                setLoading(false);
+                console.log("Error while uploading the file: ", err);
+            });
+  }
 
         const {id} = useParams();
         const navigate = useNavigate()
@@ -79,11 +105,11 @@ function EditProfile(){
         
                     <label htmlFor="bio">Bio</label>
                         <input type="text" name='bio' id='bio' value={bio} onChange={handleBio} />
+            
+                    <label htmlFor="fileUrl">Profile Picture</label>
+                        <input type="file" name='imgUrl' id='imgUrl' value={fileUrl} onChange={handleFileUpload}/> 
 
-                    <label htmlFor="imgUrl">Image</label>
-                        <input type="text" name='imgUrl' id='imgUrl' value={imgUrl} onChange={handleImgUrl} />
-
-                    <label htmlFor="favoriteCar">Favorite Car</label>
+                    <label htmlFor="favoriteCar">Favorite Car **for verification purposes**</label>
                         <input type="text" name='favoriteCar' id='favoriteCar' value={favoriteCar} onChange={handleFavoriteCar} />
         
                     <button type="submit">Submit</button>

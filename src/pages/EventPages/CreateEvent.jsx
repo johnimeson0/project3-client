@@ -14,30 +14,37 @@ function CreateEvent(){
         const [body, setBody] = useState('')
         const [address, setAddress] = useState('')
         const [imgUrl, setImgUrl] = useState('')
-    
+        const [fileUrl, setFileUrl] = useState("");
+        const [loading, setLoading] = useState(false);
+
+
+  const handleFileUpload = (e) => {
+    setLoading(true);
+
+    const uploadData = new FormData();
+
+    uploadData.append("fileUrl", e.target.files[0]);
+
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/api/upload`, uploadData)
+      .then((response) => {
+        console.log(response.data.fileUrl)
+
+        setLoading(false);
+       
+          setImgUrl(response.data.fileUrl)
+  
+        })
+        .catch((err) => {
+            setLoading(false);
+            console.log("Error while uploading the file: ", err);
+        });
+    }
+        
         const handleTitle = (e) => setTitle(e.target.value)
         const handleBody = (e) => setBody(e.target.value)
         const handleAddress = (e) => setAddress(e.target.value)
         const handleImgUrl = (e) => setImgUrl(e.target.value) 
-
-        // const handleFileUpload = (e) => {
-        //     // console.log("The file to be uploaded is: ", e.target.files[0]);
-        
-        //     const uploadData = new FormData();
-        
-        //     // imageUrl => this name has to be the same as in the model since we pass
-        //     // req.body to .create() method when creating a new movie in '/api/movies' POST route
-        //     uploadData.append("imageUrl", e.target.files[0]);
-        
-        //     service
-        //       .uploadImage(uploadData)
-        //       .then((response) => {
-        //         // console.log("response is: ", response);
-        //         // response carries "fileUrl" which we can use to update the state
-        //         setImgUrl(response.fileUrl);
-        //       })
-        //       .catch((err) => console.log("Error while uploading the file: ", err));
-        //   };
     
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -50,8 +57,7 @@ function CreateEvent(){
                 setBody('')
                 setAddress('')
                 setImgUrl('')
-                navigate('/events')
-                
+                navigate('/forum')
             })
             .catch((err) => console.log(err))
         }
@@ -71,8 +77,8 @@ function CreateEvent(){
                 <label htmlFor="address">Address</label>
                     <input type="text" name='address' id='address' value={address} onChange={handleAddress} />
                 
-               {/*  <label htmlFor="imgUrl">Car Picture</label>
-                    <input type="file" name='imgUrl' id='imgUrl' value={imgUrl} onChange={handleImgUrl} /> */}
+                 <label htmlFor="fileUrl">Event Picture</label>
+                    <input type="file" name='imgUrl' id='imgUrl' value={fileUrl} onChange={handleFileUpload}/> 
     
                 <button type="submit">Add Event</button>
             </form>

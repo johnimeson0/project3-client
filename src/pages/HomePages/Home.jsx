@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
@@ -13,9 +13,21 @@ function Home(){
         }
     }
 
+    const [joke, setJoke] = useState('')
+
+    const getJoke = async() => {
+        let response = await axios.get('https://geek-jokes.sameerkumar.website/api?format=json')
+        setJoke(response.data)
+        response.json(response.data)
+    }
+
     useEffect(() => {
         checkFirstTime()
     }, [user])
+
+    useEffect(() => {
+        getJoke()
+    }, [])
 
     return (
       <div className='Index'>
@@ -45,9 +57,16 @@ function Home(){
   
           {loggedIn && (
                <section className='home'>
-                    <h1>Route test successful</h1>
-                    <h2> Welcome, {user.username}! your id is {user._id}</h2>
+                    <div className='title'>
+                    <h1>Website name</h1>
+                    <h2> Welcome, @{user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
+                    </div>
+                    <div className='joke'>
+                        <h1>Thank you for visiting website name, enjoy a random joke!</h1>
+                        <h3>{joke.joke}</h3>
+                    </div>
               </section>
+
           )}
   
       </div>
