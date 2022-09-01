@@ -1,15 +1,34 @@
 import { useEffect, useContext, useState } from 'react'
 import axios from 'axios'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
 
 function Home(){
-    const {loggedIn, user, logout} = useContext(AuthContext)
+    const {loggedIn, user, id, logout} = useContext(AuthContext)
+
+     const [profile, setProfile] = useState(null);
+
+    const getProfile = async() => {
+        try {
+            const storedToken = localStorage.getItem("authToken");
+
+            let response = await axios.get(`${process.env.REACT_APP_API_URL}/profiles/view-profile/${user._id}`, {
+                headers: {
+                    Authorization: `Bearer ${storedToken}`
+                }
+            })
+                setProfile(response.data)
+                console.log(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const navigate = useNavigate()
-    console.log(user)
+    // console.log(user)
     const checkFirstTime = () => {
-        if (user && user.favoriteCar == "") {
-            navigate(`/edit-profile/${user._id}`)
+        if (profile && profile.favoriteCar === "") {
+            navigate(`/edit-profile/${profile._id}`)
         }
     }
 
@@ -27,6 +46,7 @@ function Home(){
 
     useEffect(() => {
         getJoke()
+        getProfile()
     }, [])
 
     return (
@@ -59,7 +79,7 @@ function Home(){
                <section className='home'>
                     <div className='title'>
                     <h1>Website name</h1>
-                    <h2> Welcome, @{user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
+                    <h2> Welcome, {profile.name}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
                     </div>
                     <div className='joke'>
                         <h1>Thank you for visiting website name, enjoy a random joke!</h1>
