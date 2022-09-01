@@ -42,7 +42,8 @@ function PostsPage() {
 
 return (
     <>
-        {/* <AddCar getposts={getposts} /> */}
+        <Link to="/create-post"><button>Add Post</button></Link>
+
     <div className='PostListPage'>
     <Searchbar searchResults={searchResults} />
         {posts.map((el) => {

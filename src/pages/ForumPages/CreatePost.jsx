@@ -47,7 +47,7 @@ function CreatePost(){
                 setTitle('')
                 setBody('')
                 setImgUrl('')
-                navigate('/events')
+                navigate('/forum')
                 
             })
             .catch((err) => console.log(err))
