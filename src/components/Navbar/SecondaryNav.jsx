@@ -12,7 +12,7 @@ function SecondaryNav() {
 
         {loggedIn && (
             <>
-<button onClick={() => console.log('nice, cool, awesome')}>Friends List</button>
+<Link to="/friends"><button>Friends List</button></Link>
      {/*  getFriendsModal() */}
 <button onClick={() => console.log('nice, cool, awesome')}>Notifications</button>
      {/*  getNotificationsModal() */}

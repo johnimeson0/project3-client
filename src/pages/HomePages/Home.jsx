@@ -1,10 +1,21 @@
-import { useState, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
 
 function Home(){
     const {loggedIn, user, logout} = useContext(AuthContext)
+    const navigate = useNavigate()
+    console.log(user)
+    const checkFirstTime = () => {
+        if (user && user.favoriteCar == "") {
+            navigate(`/edit-profile/${user._id}`)
+        }
+    }
+
+    useEffect(() => {
+        checkFirstTime()
+    }, [user])
 
     return (
       <div className='Index'>
@@ -16,7 +27,7 @@ function Home(){
           {!loggedIn && (
             <section className='home-no-log'>
 
-            <h1>You are not yet logged in</h1>
+            <h1>You are not logged in</h1>
             <div className='index-navigation'>
 
                 <Link to="/login">
@@ -35,6 +46,7 @@ function Home(){
           {loggedIn && (
                <section className='home'>
                     <h1>Route test successful</h1>
+                    <h2> Welcome, {user.username}! your id is {user._id}</h2>
               </section>
           )}
   
