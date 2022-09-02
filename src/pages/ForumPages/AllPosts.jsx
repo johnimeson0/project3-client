@@ -42,13 +42,14 @@ function PostsPage() {
 
 return (
     <>
-        <Link to="/create-post"><button>Add Post</button></Link>
+        <Link to="/create-post"><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+            Add Post</button></Link>
 
-    <div className='PostListPage'>
+    <div className='CarListPage'>
     <Searchbar searchResults={searchResults} />
         {posts.map((el) => {
             return (
-                <div className="Postcard card" key={el._id}>
+                <div className="Carcard card" key={el._id}>
                     <Link to={`/forum/${el._id}`}>
                         <div>
                             <div className='title div'>

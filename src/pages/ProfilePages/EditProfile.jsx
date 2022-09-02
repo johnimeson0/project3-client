@@ -96,7 +96,8 @@ function EditProfile(){
         }
     
         return (
-            <div className='EditProfile'>
+            <>
+            {/* <div className='EditProfile'>
                 <h3>Edit Profile</h3>
         
                 <form onSubmit={handleSubmit} className="edit-form">
@@ -115,7 +116,45 @@ function EditProfile(){
                     <button type="submit">Submit</button>
                 </form>
                 <button onClick={deleteProfile} id="delete">Delete Account</button>
+            </div> */}
+            <body class="antialiased">
+    <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+        <h1 class="text-4xl font-medium">Edit Profile</h1>
+        {/* <p class="text-slate-500"> Welcome 👋</p> */}
+
+        <form onSubmit={handleSubmit} class="my-10">
+            <div class="flex flex-col space-y-5">
+                <label for="name">
+                    <p class="font-medium text-slate-700 pb-2">Name</p>
+                    <input id="name" name="name" type="text" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="Enter your name" value={name} onChange={handleName}/>
+                </label>
+                <label for="bio">
+                    <p class="font-medium text-slate-700 pb-2">Bio</p>
+                    <input id="bio" name="bio" type="text" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="Enter a short description about yourself" value={bio} onChange={handleBio} />
+                </label>
+                <label for="fileUrl">
+                    <p class="font-medium text-slate-700 pb-2">Profile Picture</p>
+                    <input id="fileUrl" name="fileUrl" type="file" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" value={fileUrl} onChange={handleFileUpload} />
+                </label>
+
+                <button type="submit" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                      </svg>
+                      <span>Submit</span>
+                </button>
+                <button onClick={deleteProfile} id="delete" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="red" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                      </svg>
+                      <span>Delete Account</span>
+                </button>
             </div>
+        </form>
+    </div>
+    
+</body>
+            </>
           )
     }
 

@@ -29,8 +29,9 @@ function CarsPage() {
 
   return (
     <>
-    <div className='ProjectListPage'>
-        <Link to={`/create-car`}><button>Add Car</button></Link>
+    <div className='CarListPage'>
+        <Link to={`/create-car`}><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+            Add Car</button></Link>
         {cars.map((el) => {
             return (
                 <div className="Carcard card" key={el._id}>

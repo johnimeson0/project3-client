@@ -1,3 +1,4 @@
+import { NavbarPage } from '../NavbarTail/NavbarPage';
 import {Link, Navigate} from 'react-router-dom';
 import { AuthContext } from '../../context/auth.context';
 import { useContext } from 'react';
@@ -8,7 +9,9 @@ function Navbar() {
     const {returnToIndex} = () => {<Navigate to="/"/>}
 
   return (
-    <nav className='Navbar'>
+    <>
+    <NavbarPage />
+    {/* <nav className='Navbar'>
 
 
         {loggedIn && (
@@ -45,7 +48,8 @@ function Navbar() {
             </>
         )} */}
 
-    </nav>
+    {/* </nav> */}
+    </> 
   )
 }
 

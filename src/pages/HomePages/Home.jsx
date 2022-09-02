@@ -79,11 +79,11 @@ function Home(){
           {loggedIn && (
                <section className='home'>
                     <div className='title'>
-                    <h1>Website name</h1>
+                    <h1>REVMATCH</h1>
                     <h2> Welcome, {user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
                     </div>
                     <div className='joke'>
-                        <h1>Thank you for visiting website name, enjoy a random joke!</h1>
+                        <h1>Thank you for visiting revmatch, enjoy a random joke!</h1>
                         <h3>{joke.joke}</h3>
                     </div>
               </section>

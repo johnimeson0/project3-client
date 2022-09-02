@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -77,8 +81,8 @@ body {
   display: flex;
   justify-content: space-around;
   padding-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
+  /* margin-top: 10px; */
+  /* padding-top: 10px; */
   /* border-bottom: 5px solid #1c9cd9 ; */
   /* background-color: #00e8fd; */
 }
@@ -138,4 +142,27 @@ body {
 #delete{
   margin-top: 25vh;
   width: 15vw;
+}
+
+.CarCard{
+  border: 2px solid whitesmoke;
+  background-color: #33383d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 40vh;
+  height: 45vh;
+  width: 40vw;
+  max-width: 45vw;
+  margin-top: 2vh;
+}
+.CarCard img {
+  max-width: 40vw;
+}
+
+.CarListPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

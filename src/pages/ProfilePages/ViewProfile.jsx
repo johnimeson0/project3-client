@@ -45,7 +45,8 @@ function ViewprofilePage() {
                                 <button onClick={friendRequest}>Send Friend Request</button>
                             )}
                             {profile && user._id === profile._id && (
-                                <Link to={`/edit-profile/${profile._id}`}><button>Edit Profile</button></Link>
+                                <Link to={`/edit-profile/${profile._id}`}><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                                    Edit Profile</button></Link>
                             )}
                             <h2>{profile.name}</h2>
                             <h3>@{profile.username}</h3>

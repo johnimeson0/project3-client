@@ -39,7 +39,8 @@ function ViewCarPage() {
                             <h1>{car.ownerId[0].username}'s {car.year} {car.make} {car.model}</h1>
                     <Link to={`/profile/${car.ownerId[0]._id}`}>View {car.ownerId[0].username}'s profile</Link>
                         </div>
-                        <Link to={`/edit-car/${car._id}`}>Edit Car</Link>
+                        <Link to={`/edit-car/${car._id}`}><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                            Edit Car</button></Link>
                     {/* </Link> */}
                     {/* <h4>{el.description}</h4> */}
                 </div>

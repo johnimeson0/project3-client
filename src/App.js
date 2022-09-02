@@ -22,13 +22,13 @@ import EditCar from './pages/CarPages/EditCar';
 import Friends from './components/Friends/Friends';
 import CreateEvent from './pages/EventPages/CreateEvent';
 import CreatePost from './pages/ForumPages/CreatePost';
+import Footer from './components/Footer/Footer';
 import Private from './components/Private/Private';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <SecondaryNav />
 
     <Routes>
       <Route path="/" element= {<Anon> <Index /> </Anon>}/>
@@ -52,6 +52,10 @@ function App() {
       <Route path="/friends" element={<Private> <Friends /> </Private>}/>
       <Route path="/home" element={ <Home/> } />
     </Routes>
+    <hr />
+    <footer>
+    <Footer/>
+    </footer>
     </div>
   );
 }
