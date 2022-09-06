@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import axios from 'axios'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
 
 function Index(){

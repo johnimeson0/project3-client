@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
-import { useNavigate, Link, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 function CreateProfile(){
 

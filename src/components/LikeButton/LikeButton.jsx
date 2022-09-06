@@ -1,6 +1,6 @@
-import {useState, useEffect, useContext} from 'react'
+import {useEffect, useContext} from 'react'
 import axios from 'axios'
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context';
 
 function LikeButton() {

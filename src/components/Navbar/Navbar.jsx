@@ -1,12 +1,12 @@
 import { NavbarPage } from '../NavbarTail/NavbarPage';
-import {Link, Navigate} from 'react-router-dom';
-import { AuthContext } from '../../context/auth.context';
-import { useContext } from 'react';
+// import {Link, Navigate} from 'react-router-dom';
+// import { AuthContext } from '../../context/auth.context';
+// import { useContext } from 'react';
 
 function Navbar() {
 
-    const {loggedIn, user, logout} = useContext(AuthContext)
-    const {returnToIndex} = () => {<Navigate to="/"/>}
+    // const {loggedIn, user, logout} = useContext(AuthContext)
+    // const {returnToIndex} = () => {<Navigate to="/"/>}
 
   return (
     <>
