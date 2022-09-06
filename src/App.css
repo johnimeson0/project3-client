@@ -153,15 +153,17 @@ body {
   background-color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   min-height: 40vh;
-  height: 45vh;
   width: 40vw;
   max-width: 45vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  max-height: fit-content;
 }
 .CarCard img {
+  min-width: fit-content;
   max-width: 40vw;
 }
 

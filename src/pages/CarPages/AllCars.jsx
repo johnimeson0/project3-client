@@ -38,6 +38,7 @@ function CarsPage() {
                     <Link to={`/cars/${el._id}`}>
                         <div className='CarCard'>
                             <img src={el.imgUrl} alt="car img" id="car-img"/>
+                            <hr/>
                             <h1>{el.ownerId[0].username}'s {el.year} {el.make} {el.model}</h1>
                         </div>
                     </Link>

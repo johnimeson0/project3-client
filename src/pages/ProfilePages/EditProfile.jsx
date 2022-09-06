@@ -137,7 +137,7 @@ function EditProfile(){
                     <input id="fileUrl" name="fileUrl" type="file" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" value={fileUrl} onChange={handleFileUpload} />
                 </label>
                 <label for="favoriteCar">
-                    <p class="font-medium text-red-700 pb-2">Favorite Car **required for authentication**</p>
+                    <p class="font-medium text-red-700 pb-2">Favorite Car <br/> **required for authentication**</p>
                     <input id="favoriteCar" name="favoriteCar" type="text" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="Enter a short description about yourself" value={favoriteCar} onChange={handleFavoriteCar} />
                 </label>
 
