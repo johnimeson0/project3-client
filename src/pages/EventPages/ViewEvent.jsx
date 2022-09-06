@@ -29,7 +29,7 @@ function ViewEvent() {
     }, []);
 
   return (
-    <>
+    <section className='page'>
         {/* <Link to="/create-car">Add Car</Link> */}
     <div className='ProjectListPage'>
                         {event && (
@@ -37,6 +37,7 @@ function ViewEvent() {
                         <div className='ViewCarCard'>
                             <img src={event.imgUrl} alt="event img" id="large-event-img"/>
                             <h1> {event.title} </h1>
+                            <hr />
                             <h3>{event.body} </h3>
                             <h5>{event.address}</h5>
                             <h3>This event was posted by:</h3>
@@ -49,7 +50,7 @@ function ViewEvent() {
                         }
         
          </div>
-    </>
+    </section>
   )
 }
 

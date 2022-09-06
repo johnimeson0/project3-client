@@ -11,8 +11,8 @@ function Searchbar(props) {
 
   return (
     <div>
-      <label htmlFor="search">Search</label>
-      <input type="text" name="search" value={query} onChange={handleQuery} />
+      {/* <label htmlFor="search">Search</label> */}
+      <input type="text" name="search" value={query} placeholder='Search Here...'onChange={handleQuery} />
     </div>
   );
 }

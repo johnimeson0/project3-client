@@ -33,12 +33,15 @@ function ViewPost() {
     }, []);
 
   return (
-    <>
+    <section className='page'>
         {/* <Link to="/create-car">Add Car</Link> */}
     <div className='ProjectListPage'>
                         {post && (
                 <div className="ViewCarCard card" key={post._id}>
                         <div className='ViewCarCard'>
+                            <img src={post.imgUrl} alt="post img" id="car-img"/>
+                            <h1> {post.title} </h1>
+                            <h3>{post.body} </h3>
                             {post && user._id !== post.authorId[0]._id && (
                         
                                 <LikeButton/>
@@ -50,9 +53,6 @@ function ViewPost() {
                                     Edit Post</button></Link>
 
                             )}
-                            <img src={post.imgUrl} alt="post img" id="car-img"/>
-                            <h1> {post.title} </h1>
-                            <h3>{post.body} </h3>
                             <h5>This was posted by:</h5>
                     <Link className="profile-link-card"to={`/profile/${post.authorId[0]._id}`}> <div className="profile-link-card"> <img src={post.authorId[0].imgUrl} alt="" id="small-img"/>@{post.authorId[0].username} </div> </Link>
                         </div>
@@ -63,7 +63,7 @@ function ViewPost() {
                         }
         
          </div>
-    </>
+    </section>
   )
 }
 
