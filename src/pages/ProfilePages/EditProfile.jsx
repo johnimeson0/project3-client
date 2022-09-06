@@ -136,6 +136,10 @@ function EditProfile(){
                     <p class="font-medium text-slate-700 pb-2">Profile Picture</p>
                     <input id="fileUrl" name="fileUrl" type="file" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" value={fileUrl} onChange={handleFileUpload} />
                 </label>
+                <label for="favoriteCar">
+                    <p class="font-medium text-red-700 pb-2">Favorite Car **required for authentication**</p>
+                    <input id="favoriteCar" name="favoriteCar" type="text" class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow" placeholder="Enter a short description about yourself" value={favoriteCar} onChange={handleFavoriteCar} />
+                </label>
 
                 <button type="submit" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
