@@ -157,7 +157,7 @@ body {
   flex-direction: column;
   min-height: 40vh;
   width: 40vw;
-  max-width: 45vw;
+  min-width: fit-content;
   margin-top: 2vh;
   margin-bottom: 2vh;
   max-height: fit-content;
