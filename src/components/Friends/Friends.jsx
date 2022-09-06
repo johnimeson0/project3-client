@@ -34,11 +34,11 @@ function Friends() {
     }, []);
 
   return (
-    <>
+    <section className='page'>
         {/* <Link to="/create-profile">Add profile</Link> */}
     <div className='FriendsList'>
                     <h1>Your Friends:</h1>
-                        {profile && friends.map((el) => {
+                        {friends.length > 0 && profile && friends.map((el) => {
                 return <div className='FriendsCard card' key={el._id}>
                     <Link to={`/view-profile/${el._id}`}>
                         <img src={el.imgUrl} alt="profile image" id="car-img"/>
@@ -46,9 +46,9 @@ function Friends() {
                         </Link>
                 </div>
             })}
-        
+                        {friends.length === 0 && <p>You have no friends on <i>REVMATCH</i> yet, feel free to browse cars, events, and posts to find people!</p> }
          </div>
-    </>
+    </section>
   )
 }
 

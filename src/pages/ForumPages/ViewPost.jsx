@@ -39,7 +39,7 @@ function ViewPost() {
                         {post && (
                 <div className="ViewCarCard card" key={post._id}>
                         <div className='ViewCarCard'>
-                            <img src={post.imgUrl} alt="post img" id="car-img"/>
+                            <img src={post.imgUrl} id="car-img"/>
                             <h1> {post.title} </h1>
                             <h3>{post.body} </h3>
                             {post && user._id !== post.authorId[0]._id && (

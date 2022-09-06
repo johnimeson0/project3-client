@@ -81,7 +81,7 @@ function Home(){
                <section className='home'>
                     <div className='title'>
                     <h1>REVMATCH</h1>
-                    <h2> Welcome, {user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
+                    <h2> Welcome, @{user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
                     </div>
                     <div className='joke'>
                         <h1>Thank you for visiting,<br /> enjoy a random joke!</h1>
