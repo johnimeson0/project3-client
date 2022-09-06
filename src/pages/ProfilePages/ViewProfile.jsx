@@ -17,7 +17,7 @@ function ViewprofilePage() {
         try {
             const storedToken = localStorage.getItem("authToken");
 
-            let response = await axios.get(`${process.env.REACT_APP_API_URL}/profiles/view-profile/${user._id}`, {
+            let response = await axios.get(`${process.env.REACT_APP_API_URL}/profiles/view-profile/${id}`, {
                 headers: {
                     Authorization: `Bearer ${storedToken}`
                 }

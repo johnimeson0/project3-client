@@ -5,7 +5,6 @@ import Navbar from './components/Navbar/Navbar';
 import Login from './pages/AuthPages/Login';
 import Signup from './pages/AuthPages/Signup';
 import Index from './pages/HomePages/Index';
-import Profile from './pages/ProfilePages/Profile';
 import ViewProfile from './pages/ProfilePages/ViewProfile';
 import EditProfile from './pages/ProfilePages/EditProfile';
 import CreateProfile from './pages/ProfilePages/CreateProfile';
