@@ -46,7 +46,30 @@ return (
             Add Post</button></Link>
 
     <div className='CarListPage'>
+        <h1>Search for keywords here, or scroll for all posts</h1>
     <Searchbar searchResults={searchResults} />
+        {displayPosts.map((el) => {
+            return (
+                <div className="Carcard card" key={el._id}>
+                    <Link to={`/forum/${el._id}`}>
+                        <div>
+                            <div className='title div'>
+                                <h1>{el.title}</h1>
+                                <h2>{el.authorId[0].username}</h2>
+                            </div>
+                            <p>{el.body}</p>
+                        </div>
+                    </Link>
+                    {/* <h4>{el.description}</h4> */}
+                </div>
+            )
+        })}
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div className='CarListPage'>
+        <h2>All posts:</h2>
         {posts.map((el) => {
             return (
                 <div className="Carcard card" key={el._id}>
