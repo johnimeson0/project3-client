@@ -39,9 +39,9 @@ function EventsPage() {
                         <div>
                             <img src={el.imgUrl} alt="" id='event-img'/>
                             <h1>{el.title} - @{el.authorId[0].username}</h1>
+                        <hr />
                             <p>{el.body}</p>
                         </div>
-                        <hr />
                     </Link>
                     {/* <h4>{el.description}</h4> */}
                 </div>

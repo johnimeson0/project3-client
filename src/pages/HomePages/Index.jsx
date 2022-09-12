@@ -17,10 +17,8 @@ function Index(){
             <section className='index'>
 
                 <div className='title'>
-                    <h1>App Name</h1>
-                    <h5>App Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nam autem laborum numquam
-                        minus soluta repellat officiis deleniti hic aperiam voluptates consequuntur quo, quaerat necessitatibus, 
-                        inventore veritatis. Deleniti, cum perspiciatis.</h5>
+                    <h1>Welcome to REVMATCH! </h1>
+                    <h3>Downshift and relax, REVMATCH is a solely car enthusiast based social media platform, where you and other users can upload your cars, posts, and car meets to connect with others!</h3>
                 </div>
 
                 <div className='index-navigation'>
