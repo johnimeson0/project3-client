@@ -80,16 +80,17 @@ function Home(){
           {loggedIn && (
                <section className='home'>
                     <div className='title'>
-                    <h1>REVMATCH</h1>
-                    <h2> Welcome, @{user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
-                    </div>
-                    <div className='joke'>
-                        <h1>Thank you for visiting,<br /> enjoy a random joke!</h1>
-                        <h3>{joke.joke}</h3>
-                    </div>
-              </section>
+                        <h1 className='header-txt'>REVMATCH</h1>
+                            <h2 className='sub-header'> Welcome, @{user.username}! Please refer to the nav bar to browse cars, posts, and events! :D </h2>
+                                </div>
+                                <hr/>
+                                    <div className='joke'>
+                                <h1>Thank you for visiting,<br /> enjoy a random joke!</h1>
+                            <h3>{joke.joke}</h3>
+                        </div>
+                </section>
 
-          )}
+             )}
   
       </div>
       </section>

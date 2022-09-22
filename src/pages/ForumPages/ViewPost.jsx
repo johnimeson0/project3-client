@@ -34,35 +34,26 @@ function ViewPost() {
 
   return (
     <section className='page'>
-        {/* <Link to="/create-car">Add Car</Link> */}
-    <div className='ProjectListPage'>
-                        {post && (
+    
+        <div className='ProjectListPage'>
+            {post && (
                 <div className="ViewCarCard card" key={post._id}>
-                        <div className='ViewCarCard'>
-                            <img src={post.imgUrl} id="car-img"/>
+                    <div className='ViewCarCard'>
+                        <img src={post.imgUrl} id="car-img"/>
                             <h1> {post.title} </h1>
-                            <h3>{post.body} </h3>
-                            {post && user._id !== post.authorId[0]._id && (
-                        
-                                <LikeButton/>
-                
-                            )}
-                            {post && user._id === post.authorId[0]._id && (
-
-                                <Link to={`/edit-post/${post._id}`}><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
-                                    Edit Post</button></Link>
-
-                            )}
-                            <h5>This was posted by:</h5>
-                    <Link className="profile-link-card"to={`/profile/${post.authorId[0]._id}`}> <div className="profile-link-card"> <img src={post.authorId[0].imgUrl} alt="" id="small-img"/>@{post.authorId[0].username} </div> </Link>
+                                <h3>{post.body} </h3>
+                                    {post && user._id !== post.authorId[0]._id && <LikeButton/>}
+                                        {post && user._id === post.authorId[0]._id && (
+                                            <Link to={`/edit-post/${post._id}`}><button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                                                Edit Post</button>
+                                            </Link>)}
+                                    <h5>This was posted by:</h5>
+                            <Link className="profile-link-card"to={`/profile/${post.authorId[0]._id}`}> <div className="profile-link-card"> <img src={post.authorId[0].imgUrl} alt="" id="small-img"/>@{post.authorId[0].username} </div> </Link>
                         </div>
-                    {/* </Link> */}
-                    {/* <h4>{el.description}</h4> */}
-                </div>
-                            )
-                        }
-        
-         </div>
+                    </div>
+                )
+            }
+        </div>
     </section>
   )
 }

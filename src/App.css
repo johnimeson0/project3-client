@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width: 1023px) {
-  body {
-    margin-top: 8vh;
-  }
-  .testing{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    }
-  }
 
 #event-img {
   max-width: 70vw;
@@ -41,17 +31,18 @@ body {
   background-color: whitesmoke;
   color: #282c34;
   font-family: monospace;
-  font-size: 125%
+  font-size: 125%;
+  text-align: center;
 }
 
 .Navbar{
- display: flex;
- justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
- margin-bottom: 20px; 
- /* padding-top: 20px; */
- /* padding-bottom: 20px; */
- /* background-color: #ff81de */
+  margin-bottom: 20px; 
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+  /* background-color: #ff81de */
 }
 .SecondaryNav{
   display: flex;
@@ -181,6 +172,12 @@ h1 {
   border-radius: 15px;
 }
 
+.Eventcard img{
+  display: flex;
+  justify-content: center;
+  margin-left: 2.5vw;
+}
+
 .Viewprofilecard .profile-details {
   display: flex;
   justify-content: center;
@@ -194,3 +191,76 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
+
+.header-txt{
+  font-size: 5em;
+  margin-top: 25vh;
+  margin-bottom: 1vh;
+}
+
+.index-header-txt{
+  font-size: 5em;
+  margin-top: 25vh;
+  margin-bottom: 1vh;
+}
+
+.sub-header{
+  font-size: 1.25em;
+  margin-bottom: 10vh;
+}
+
+#index-login{
+  font-size: 2.5em;
+  margin-right: 2.5vw;
+}
+
+#index-signup{
+  font-size: 2.5em;
+  margin-left: 2.5vw;
+  margin-bottom: 22.5vh;
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    margin-top: 8vh;
+    text-align: center;
+  }
+
+  .testing{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Eventcard img{
+    margin-left: 11vw;
+  }
+
+  .header-txt{
+    font-size: 5em;
+    margin-top: 15vh;
+    margin-bottom: 1vh;
+  }
+
+  .index-header-txt{
+    font-size: 3em;
+    margin-top: 10vh;
+    margin-bottom: 1vh;
+  }
+
+  #index-login{
+    font-size: 2em;
+    margin-right: 2.5vw;
+  }
+  
+  #index-signup{
+    font-size: 2em;
+    margin-left: 2.5vw;
+    margin-bottom: 22.5vh;
+  }
+
+  #no-friends{
+    margin-top: 20vh;
+  }
+
+  }

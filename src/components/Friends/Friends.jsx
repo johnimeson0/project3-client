@@ -46,7 +46,7 @@ function Friends() {
                         </Link>
                 </div>
             })}
-                        {friends.length === 0 && <p>You have no friends on <i>REVMATCH</i> yet, feel free to browse cars, events, and posts to find people!</p> }
+                        {friends.length === 0 && <p id="no-friends">You have no friends on <i>REVMATCH</i> yet, feel free to browse cars, events, and posts to find people!</p> }
          </div>
     </section>
   )
