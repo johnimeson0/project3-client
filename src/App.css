@@ -209,12 +209,12 @@ h1 {
   margin-bottom: 10vh;
 }
 
-#index-login{
+.index-login{
   font-size: 2.5em;
   margin-right: 2.5vw;
 }
 
-#index-signup{
+.index-signup{
   font-size: 2.5em;
   margin-left: 2.5vw;
   margin-bottom: 22.5vh;
@@ -248,12 +248,12 @@ h1 {
     margin-bottom: 1vh;
   }
 
-  #index-login{
+  .index-login{
     font-size: 2em;
     margin-right: 2.5vw;
   }
   
-  #index-signup{
+  .index-signup{
     font-size: 2em;
     margin-left: 2.5vw;
     margin-bottom: 22.5vh;

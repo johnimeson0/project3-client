@@ -61,15 +61,15 @@ function Home(){
           {!loggedIn && (
             <section className='home-no-log'>
 
-            <h1>You are not logged in</h1>
+            <h1 className='index-header-txt'>You are not logged in</h1>
             <div className='index-navigation'>
 
                 <Link to="/login">
-                    <button>Log in</button>        
+                    <button className='index-login'>Log in</button>        
                 </Link>
 
                 <Link to="/signup">
-                    <button>Sign up</button>        
+                    <button className='index-signup'>Sign up</button>        
                 </Link>
 
             </div>

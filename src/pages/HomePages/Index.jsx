@@ -24,11 +24,11 @@ function Index(){
                 <div className='index-navigation'>
 
                     <Link to="/login">
-                        <button id='index-login'>Log in</button>        
+                        <button className='index-login'>Log in</button>        
                     </Link>
 
                     <Link to="/signup">
-                        <button id='index-signup'>Sign up</button>        
+                        <button className='index-signup'>Sign up</button>        
                     </Link>
 
                 </div>
