@@ -14,7 +14,7 @@ function Index(){
 
                 <div className='title'>
                     <h1 className='index-header-txt'>Welcome to REVMATCH! </h1>
-                    <h3 className='sub-header'>Downshift and relax, REVMATCH is a solely car enthusiast based social media platform, where you and other users can upload your cars, posts, and car meets to connect with others!</h3>
+                    <h3 className='sub-header'>Downshift and relax, REVMATCH is a car based social media platform, and my third and final Ironhack Full Time Web Development Course project! Here, you and other users can upload your cars, posts, and car meets to connect with others!</h3>
                 </div>
 
                 <div className='index-navigation'>
