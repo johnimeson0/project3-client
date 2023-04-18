@@ -55,22 +55,34 @@ function Home(){
       <div className='Index'>
   
           {!loggedIn && (
-            <section className='home-no-log'>
+            // <section className='home-no-log'>
 
-            <h1 className='index-header-txt'>You are not logged in</h1>
-            <div className='index-navigation'>
+            // <h1 className='index-header-txt'>You are not logged in</h1>
+            // <div className='index-navigation'>
 
-                <Link to="/login">
-                    <button className='index-login'>Log in</button>        
-                </Link>
+            //     <Link to="/login">
+            //         <button className='index-login'>Log in</button>        
+            //     </Link>
 
-                <Link to="/signup">
-                    <button className='index-signup'>Sign up</button>        
-                </Link>
+            //     <Link to="/signup">
+            //         <button className='index-signup'>Sign up</button>        
+            //     </Link>
 
-            </div>
+            // </div>
 
-            </section>
+            // </section>
+            <section className='home'>
+            <div className='title'>
+                <h1 className='header-txt'>REVMATCH</h1>
+                    <h2 className='sub-header'> Welcome, Guest! Please refer to the nav bar to browse cars, posts, and events!  </h2>
+                        </div>
+                        <hr/>
+                            <div className='joke'>
+                        <h1>Thank you for visiting,<br /> enjoy a random joke!</h1>
+                    <h3>{joke.joke}</h3>
+                </div>
+        </section>
+
           )}
   
           {loggedIn && (
