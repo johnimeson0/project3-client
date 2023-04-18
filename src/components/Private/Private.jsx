@@ -8,7 +8,7 @@ function Private({children}) {
 
     if (loading) return <p>Loading...</p>
 
-    if (!loggedIn) return <Navigate to="/login"/>
+    // if (!loggedIn) return <Navigate to="/login"/>
     else return children
 
 }
