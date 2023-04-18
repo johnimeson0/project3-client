@@ -13,23 +13,9 @@ function SecondaryNav() {
         {loggedIn && (
             <>
 <Link to="/friends"><button>Friends List</button></Link>
-     {/*  getFriendsModal() */}
      <button onClick={logout}>Logout</button>
-     {/*  getNotificationsModal() */}
             </>
         )}
-
-        {/* {!loggedIn && (
-            <>
-            <Link to="/login">
-                <button>Log in</button>        
-            </Link>
-
-            <Link to="/signup">
-                <button>Sign up</button>        
-            </Link>
-            </>
-        )} */}
 
     </nav>
   )

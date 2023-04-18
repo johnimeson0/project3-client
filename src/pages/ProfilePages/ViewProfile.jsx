@@ -35,7 +35,7 @@ function ViewprofilePage() {
 
   return (
     <section className='page'>
-        {/* <Link to="/create-profile">Add profile</Link> */}
+        
     <div className='ProjectListPage'>
                         {profile && (
                 <div className="ViewProfilecard card" key={profile._id}>

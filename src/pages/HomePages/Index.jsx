@@ -9,10 +9,6 @@ function Index(){
     return (
       <div className='Index'>
   
-          {/* <Link to="/home">
-              <button>Home</button>        
-          </Link> */}
-  
           {!loggedIn && (
             <section className='index'>
 

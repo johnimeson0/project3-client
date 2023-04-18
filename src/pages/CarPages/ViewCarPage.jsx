@@ -33,7 +33,7 @@ function ViewCarPage() {
 
   return (
     <section className='page'>
-        {/* <Link to="/create-car">Add Car</Link> */}
+        
     <div className='EventListPage'>
                         {car && (
                 <div className="ViewCarCard card" key={car._id}>
@@ -48,8 +48,6 @@ function ViewCarPage() {
                             Edit Car</button></Link>
                             )}
 
-                    {/* </Link> */}
-                    {/* <h4>{el.description}</h4> */}
                 </div>
                             )
                         }

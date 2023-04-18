@@ -49,9 +49,9 @@ function EditCar(){
     
         const handleSubmit = (e) => {
             e.preventDefault();
-            //gather the values to create the project
+
             const body = {make, model, year, imgUrl, userId: user._id};
-            //axios.post(`url`, information sent)
+
             axios
             .put(`${process.env.REACT_APP_API_URL}/cars/edit/${id}`, body)
             .then(() => {
@@ -89,7 +89,6 @@ function EditCar(){
             <body class="antialiased">
                     <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
                         <h1 class="text-4xl font-medium">Edit Car</h1>
-                        {/* <p class="text-slate-500"> Welcome 👋</p> */}
                 
                         <form onSubmit={handleSubmit} class="my-10">
                             <div class="flex flex-col space-y-5">

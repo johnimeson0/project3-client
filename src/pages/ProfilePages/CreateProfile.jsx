@@ -15,9 +15,9 @@ function CreateProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //gather the values to create the profile
+
     const requestBody = { name, bio, imgUrl, favoriteCar };
-    //axios.post(`url`, information sent)
+    
     axios
       .put(
         `${process.env.REACT_APP_API_URL}/profiles/edit-profile`,

@@ -49,9 +49,9 @@ function CreateCar(){
             
             const handleSubmit = (e) => {
                 e.preventDefault();
-                //gather the values to create the project
+
                 const requestBody = {make, model, year, imgUrl, userId: user._id};
-                //axios.post(`url`, information sent)
+
                 axios.post(`${process.env.REACT_APP_API_URL}/cars/create`, requestBody)
                 .then(() => {
                     setMake('')
@@ -66,29 +66,10 @@ function CreateCar(){
             
             return (
                     <>
-                {/* <div className='AddProject'>
-            <h3>Add Car</h3>
-    
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="make">Make</label>
-                    <input type="text" name='make' id='make' value={make} onChange={handleMake} />
-    
-                <label htmlFor="model">Model</label>
-                    <input type="text" name='model' id='model' value={model} onChange={handleModel} />
-    
-                <label htmlFor="year">Year</label>
-                    <input type="number" name='year' id='year' value={year} onChange={handleYear} />
                 
-                <label htmlFor="fileUrl">Car Picture</label>
-                    <input type="file" name='imgUrl' id='imgUrl' value={fileUrl} onChange={handleFileUpload}/> 
-    
-                <button type="submit">Add</button>
-            </form>
-        </div> */}
                 <body class="antialiased">
                 <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
-                    <h1 class="text-4xl font-medium">Add Car</h1>
-                    {/* <p class="text-slate-500"> Welcome 👋</p> */}
+                    <h1 class="text-4xl font-medium">Add Car</h1> 
             
                     <form onSubmit={handleSubmit} class="my-10">
                         <div class="flex flex-col space-y-5">

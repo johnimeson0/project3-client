@@ -25,7 +25,7 @@ function Home(){
     }
 
     const navigate = useNavigate()
-    // console.log(user)
+
     const checkFirstTime = () => {
         if (profile && profile.favoriteCar === "") {
             navigate(`/edit-profile/${user._id}`)
@@ -53,10 +53,6 @@ function Home(){
     return (
         <section className='page'>
       <div className='Index'>
-  
-          {/* <Link to="/home">
-              <button>Home</button>        
-          </Link> */}
   
           {!loggedIn && (
             <section className='home-no-log'>

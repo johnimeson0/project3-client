@@ -40,16 +40,13 @@ export const NavbarPage = () => {
     </Navbar>
     <div className='SecondaryNav'>
 <Link to="/friends"><button>Friends List</button></Link>
- {/*  getFriendsModal() */}
+
  <button onClick={logout}>Logout</button>
- {/*  getNotificationsModal() */}
  </div>
 
         </>
       )}
       
-
-/* Navbar logic */
 
 const style = {
   navbar: `fixed px-4 py-2 shadow top-0 w-full lg:flex lg:flex-row lg:items-center lg:justify-start lg:relative`,
@@ -78,7 +75,6 @@ const Navbar = ({ children, className }) => {
     setOpen((prevState) => !prevState);
   }, []);
 
-  // close navbar on click outside when viewport is less than 1024px
   React.useEffect(() => {
     const handleOutsideClick = (event) => {
       if (window.innerWidth < 1024) {
@@ -103,7 +99,6 @@ const Navbar = ({ children, className }) => {
 
 const useToggle = () => React.useContext(Context);
 
-/* You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby */
 const NavbarBrand = ({ children, href }) => (
   <a href={href} className={style.brand}>
     <strong>{children}</strong>
@@ -144,7 +139,6 @@ const NavbarNav = ({ children, orientation }) => (
 
 const NavbarItem = ({ children }) => <li className={style.item}>{children}</li>;
 
-/* You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby */
 const NavbarLink = ({ children, href, active, activeClass }) => (
   <a href={href} className={active ? activeClass : ''}>
     {children}

@@ -97,30 +97,10 @@ function EditProfile(){
     
         return (
             <>
-            {/* <div className='EditProfile'>
-                <h3>Edit Profile</h3>
-        
-                <form onSubmit={handleSubmit} className="edit-form">
-                    <label htmlFor="name">Name</label>
-                        <input type="text" name='name' id='name' value={name} onChange={handleName} />
-        
-                    <label htmlFor="bio">Bio</label>
-                        <input type="text" name='bio' id='bio' value={bio} onChange={handleBio} />
-            
-                    <label htmlFor="fileUrl">Profile Picture</label>
-                        <input type="file" name='imgUrl' id='imgUrl' value={fileUrl} onChange={handleFileUpload}/> 
 
-                    <label htmlFor="favoriteCar">Favorite Car **for verification purposes**</label>
-                        <input type="text" name='favoriteCar' id='favoriteCar' value={favoriteCar} onChange={handleFavoriteCar} />
-        
-                    <button type="submit">Submit</button>
-                </form>
-                <button onClick={deleteProfile} id="delete">Delete Account</button>
-            </div> */}
             <body class="antialiased">
     <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
         <h1 class="text-4xl font-medium">Edit Profile</h1>
-        {/* <p class="text-slate-500"> Welcome 👋</p> */}
 
         <form onSubmit={handleSubmit} class="my-10">
             <div class="flex flex-col space-y-5">
